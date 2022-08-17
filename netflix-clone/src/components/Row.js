@@ -9,14 +9,14 @@ function Row({ title, fetchURL, isLargeRow }) {
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(fetchURL);
-      console.log(request);
+      //console.log(request);
       setMovies(request.data.results);
       return request;
     }
     fetchData();
   }, [fetchURL]);
 
-  console.table(movies);
+  //console.table(movies);
   return (
     <div className="row">
       <h2>{title}</h2>
